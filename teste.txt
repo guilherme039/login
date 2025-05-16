@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Radar - Avaliação de João da Silva</title>
+    <!-- Incluindo o Chart.js via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        canvas {
+            max-width: 600px;
+            max-height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="radarChart"></canvas>
+
+    <script>
+        // Configuração do gráfico de radar
+        const ctx = document.getElementById('radarChart').getContext('2d');
+        const radarChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: [
+                    'Visão Estratégica',
+                    'Gestão de Projeto',
+                    'Comunicação e Relacionamento',
+                    'Visão de Negócio',
+                    'Pesquisa',
+                    'Arquitetura de Informação e Design de Interação',
+                    'Visual Design',
+                    'Visão de TI'
+                ],
+                datasets: [
+                    {
+                        label: 'Atual',
+                        data: [3, 3, 4, 3, 3, 4, 3, 2], // Valores estimados com base na imagem
+                        backgroundColor: 'rgba(46, 204, 113, 0.2)', // Verde claro
+                        borderColor: 'rgba(46, 204, 113, 1)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(46, 204, 113, 1)',
+                    },
+                    {
+                        label: 'Meta: UX Sênior',
+                        data: [4, 4, 4, 4, 4, 4, 4, 4], // Valores estimados
+                        backgroundColor: 'rgba(155, 89, 182, 0.1)', // Roxo claro
+                        borderColor: 'rgba(155, 89, 182, 0.5)',
+                        borderWidth: 1,
+                        pointBackgroundColor: 'rgba(155, 89, 182, 0.5)',
+                    },
+                    {
+                        label: 'Meta para a próxima avaliação',
+                        data: [4, 4, 5, 4, 4, 5, 4, 3], // Valores estimados
+                        backgroundColor: 'rgba(52, 152, 219, 0.2)', // Azul claro
+                        borderColor: 'rgba(52, 152, 219, 1)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(52, 152, 219, 1)',
+                    },
+                    {
+                        label: 'Crescimento prioritário',
+                        data: [null, null, null, null, null, null, null, 3], // Apenas "Visão de TI"
+                        borderColor: 'rgba(231, 76, 60, 1)', // Vermelho
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(231, 76, 60, 1)',
+                        fill: false,
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    r: {
+                        angleLines: {
+                            display: true
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 5,
+                        ticks: {
+                            stepSize: 1,
+                            beginAtZero: true,
+                            callback: function(value) {
+                                return value; // Mostra os valores de 0 a 5
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 10,
+                            padding: 10
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Avaliação de Competências - João da Silva',
+                        font: { size: 16 }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
