@@ -1,0 +1,217 @@
+.dashboard-container {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(120deg, #000000cc 0%, #2a3b43cc 100%),
+    url('../../assets/bg-login.jpg') center/cover no-repeat;
+  padding: 2rem;
+  overflow-x: hidden;
+}
+
+.dashboard-content {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  color: white;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.user-info {
+  margin-top: 0.5rem;
+}
+
+.user-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.user-email {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-card.orange { background: rgba(251, 146, 60, 0.3); }
+.stat-card.green { background: rgba(34, 197, 94, 0.3); }
+.stat-card.purple { background: rgba(167, 139, 250, 0.3); }
+.stat-card.blue { background: rgba(59, 130, 246, 0.3); }
+
+.stat-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.stat-description {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.stat-link {
+  font-size: 0.75rem;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  color: white;
+  padding: 0;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .data-grid {
+    grid-template-columns: 1.5fr 1fr;
+  }
+}
+
+.transactions-section,
+.top-sales-section {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: 500;
+}
+
+td {
+  padding: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.time-info {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.status-badge {
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.section-subtitle {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.sales-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sale-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.item-name {
+  font-weight: 500;
+  margin: 0;
+}
+
+.item-price {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin: 0.25rem 0 0 0;
+}
+
+.item-count {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.view-all-btn {
+  color: #3b82f6;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.logout-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
