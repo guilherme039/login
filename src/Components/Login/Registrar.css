@@ -1,0 +1,87 @@
+.registrar-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #000000cc 0%, #2a3b43cc 100%),
+    url('../../assets/bg-login.jpg') center/cover no-repeat;
+}
+
+.registrar-form {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  width: 100%;
+  max-width: 380px;
+}
+
+.registrar-form h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.registrar-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.registrar-form input {
+  width: 100%;
+  padding: 0.7rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.registrar-form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.registrar-form button {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  background: #2575fc;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+.registrar-form button:hover {
+  background: #1a5fc8;
+}
+
+.registrar-form button[type="button"] {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 0.5rem;
+}
+
+.registrar-form button[type="button"]:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.input-field {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.input-field .icon {
+  color: #2575fc;
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
