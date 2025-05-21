@@ -1,0 +1,151 @@
+.esqueceu-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: 
+    linear-gradient(120deg, #000000cc 0%, #2a3b43cc 100%),
+    url('../../assets/bg-login.jpg') center/cover no-repeat;
+}
+
+.esqueceu-form {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  width: 100%;
+  max-width: 380px;
+  color: #fff;
+}
+
+.esqueceu-form h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.esqueceu-form p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.input-field {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.input-field .icon {
+  color: #2575fc;
+  margin-right: 0.7rem;
+  font-size: 1.2rem;
+}
+
+.input-field input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.input-field input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.esqueceu-form button {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  background: #2575fc;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.esqueceu-form button:hover {
+  background: #1a5fc8;
+}
+
+.voltar-btn {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.voltar-btn:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.error-msg {
+  color: #ff6b6b;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.success-msg {
+  color: #51cf66;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilos para o componente de notícias */
+.noticias-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.noticias-container h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #222;
+  text-align: center;
+}
+
+.noticias-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.noticias-container li {
+  margin-bottom: 1rem;
+}
+
+.noticias-container a {
+  text-decoration: none;
+  color: #2980b9;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.noticias-container a:hover {
+  color: #2575fc;
+}
